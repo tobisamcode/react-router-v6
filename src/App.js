@@ -1,25 +1,14 @@
-// import { Route, Switch, useHistory } from "react-router-dom";
-import About from "./About";
-import Footer from "./Footer";
-import Header from "./Header";
-import Home from "./Home";
-import Missing from "./Missing";
-import Nav from "./Nav";
-import NewPost from "./NewPost";
-import PostPage from "./PostPage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./page/Home";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Nav />
-      <Home />
-      <NewPost />
-      <PostPage />
-      <About />
-      <Missing />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<h2>about</h2>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
