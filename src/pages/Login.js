@@ -1,3 +1,7 @@
 export default function Login() {
-  return <div>Login</div>;
+  return (
+    <section className="section">
+      <h2>login</h2>
+    </section>
+  );
 }
